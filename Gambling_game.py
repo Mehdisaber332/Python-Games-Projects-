@@ -1,9 +1,10 @@
 print("Welcome to GAMBLING GAME")
 print("-------------------------")
 print("-------------------------")
+
 Max_lines = 3
 Min_bet = 20
-Max_bet = 100 
+Max_bet = 100
 
 """ Deposit part """
 def deposit():
@@ -60,4 +61,4 @@ def main():
     print(f"You are betting {your_bet}$ on {lines}.")
     print(f"Total bet : {total_bet}")
 
-    main()
+main()
