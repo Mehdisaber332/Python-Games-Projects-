@@ -4,6 +4,7 @@ print("-------------------------")
 Max_lines = 3
 Min_bet = 20
 Max_bet = 100 
+
 """ Deposit part """
 def deposit():
     while True:
@@ -17,9 +18,6 @@ def deposit():
         else: 
             print(" Please enter a valid number!")
     return amount 
-
-deposit_amount = deposit() 
-print(f"You have deposited {deposit_amount}$")
 
 """Number of lines part """
 def get_number_of_lines():
@@ -35,9 +33,6 @@ def get_number_of_lines():
             print("Please enter a number")
     return lines 
 
-get_lines = get_number_of_lines()
-print(f"You have deposited {deposit_amount} $ on  {get_lines} lines ")
-
 """Bet part"""
 def get_bet():
     while True:
@@ -51,6 +46,18 @@ def get_bet():
         else:
             print("Please enter a valid number to bet ")
     return bet
-bet_amount = get_bet()
-print(f"You have bet {bet_amount}$ succesfully ")
 
+def main():
+    your_money = deposit()
+    lines = get_number_of_lines() 
+    while True:
+        your_bet = get_bet()
+        total_bet = your_bet * lines 
+        if total_bet > your_money:
+            print(f"You don't have enough amount, your current money is {your_money}$")
+        else:
+            break
+    print(f"You are betting {your_bet}$ on {lines}.")
+    print(f"Total bet : {total_bet}")
+
+    main()
